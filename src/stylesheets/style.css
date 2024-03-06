@@ -1,0 +1,77 @@
+html {
+    box-sizing: border-box;
+    font: 62.5% 'Source Sans Pro', sans-serif;
+}
+  
+  
+body {
+    margin: 0px;
+    line-height: 1.3;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: aqua;
+}
+  
+a {
+    text-decoration: none;
+}
+  
+h1 {
+    font-size: 2.2rem;
+}
+  
+h2 {
+    font-size: 2rem;
+}
+  
+h3 {
+    font-size: 1.8rem;
+}
+
+/*Main container where products are displayed*/
+.prodContainer{
+    background-color: blue;
+    padding: 1rem 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* product card styles*/
+.card {
+    color: black;
+    background: #f3f3f3;
+    padding: 2rem;
+    border: 1px solid lightgray;
+    box-shadow: 1px 1px 5px rgba(22, 22, 22, 0.915);
+  }
+/* product card container */
+.prodCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0.5rem;
+    background-color: pink;
+  }
+  
+  /* character card header */
+.prodHeadContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+  
+.prodHeadContainer div {
+    width: 100%;
+  }
+  
+.prodHeadContainer h3 {
+    margin: 0;
+}
+
+.prodDetailsList{ 
+    padding: 0;
+    list-style: none;
+}
+
+/* .prodDetail {
+    list-style: none;
+} */

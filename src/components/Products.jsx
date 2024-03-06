@@ -7,7 +7,27 @@ class Products extends Component {
         super(props); 
         this.state = {
             fetchedProd: false, 
-            products: ['this is a test'],
+            products: [{ 
+                name: 'Peperomia Santorini',
+                price: '$25.00',
+                beginnerFriendly: 'Yes',
+                petFriendly: 'No',
+            }, { 
+                name: 'Peperomia Santorini',
+                price: '$25.00',
+                beginnerFriendly: 'Yes',
+                petFriendly: 'No',
+            }, { 
+                name: 'Peperomia Santorini',
+                price: '$25.00',
+                beginnerFriendly: 'Yes',
+                petFriendly: 'No',
+            }, { 
+                name: 'Peperomia Santorini',
+                price: '$25.00',
+                beginnerFriendly: 'Yes',
+                petFriendly: 'No',
+            }],
             // modalState: {
             //     open: false, 
             //     type: null, 
@@ -22,11 +42,14 @@ class Products extends Component {
 
     render (){
         const { products } = this.state; 
-        const prodElems = [
+        const prodElems = products.map((elem, i)=>{
+            return (
             <ProductCard
-            info = {products}
+                key ={i}
+                info = {elem}
             />
-        ]
+            );
+        });
 
         return (
             <section className='mainSection'>
