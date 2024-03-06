@@ -14,9 +14,12 @@ const ProductCard = ({info}) => {
             </div>
             <a className="prodPrice">{price}</a>
             <ul className="prodDetailsList">
-                <li className="prodDetail">Beginner Friendly: {beginnerFriendly}</li>
-                <li className="prodDetail">Pet Friendly: {petFriendly}</li>
+                <li className="prodDetail"> <span>Beginner Friendly:</span> {beginnerFriendly}</li>
+                <li className="prodDetail"><span>Pet Friendly:</span> {petFriendly}</li>
             </ul>
+            <div className='buyButton'>
+                <button type="button">ADD TO CART</button>
+            </div>
         </article>
     )
 

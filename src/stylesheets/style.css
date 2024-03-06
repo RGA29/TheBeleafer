@@ -32,7 +32,7 @@ h3 {
     /* background-color: blue; */
     padding: 1rem 3rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(var(--repeat, auto-fill), minmax(280px, 1fr));  /*(3, 1fr)*/;
 }
 
 /* product card styles*/
@@ -75,11 +75,19 @@ h3 {
 
 .prodDetail{
     padding-bottom: 2.5px;
+    font-weight: bold;
+}
+
+.prodDetail span{
+    font-weight: lighter;
+    color: black
+
 }
 
 .prodPrice {
     font-size: 1.5rem;
     padding-bottom: 5px;
+    color: grey;
     /* background-color: red; */
     border-bottom: solid thin grey;
 }
@@ -99,4 +107,14 @@ h3 {
     height: 250px;
     border-radius: 5px;
     box-shadow: 1px 1px 5px rgba(22, 22, 22, 0.915);
+}
+
+/*Buy Button*/
+.buyButton button {
+    background-color: green;
+    color: white; 
+    border-radius: 5px;
+    border-style: none;
+    padding: 10px;
+    width: 100%;
 }
