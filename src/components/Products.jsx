@@ -12,21 +12,25 @@ class Products extends Component {
                 price: '$25.00',
                 beginnerFriendly: 'Yes',
                 petFriendly: 'No',
+                imgsrc: 'https://plantly.io/wp-content/uploads/2020/10/IMG-2933-300x300.jpg'
             }, { 
                 name: 'Peperomia Santorini',
                 price: '$25.00',
                 beginnerFriendly: 'Yes',
                 petFriendly: 'No',
+                imgsrc: 'https://plantly.io/wp-content/uploads/2020/10/IMG-2933-300x300.jpg'
             }, { 
                 name: 'Peperomia Santorini',
                 price: '$25.00',
                 beginnerFriendly: 'Yes',
                 petFriendly: 'No',
+                imgsrc: 'https://cdn.shopify.com/s/files/1/0068/4215/5090/products/FicusGinseng_DTL_6_large.jpg?v=1619010903'
             }, { 
                 name: 'Peperomia Santorini',
                 price: '$25.00',
                 beginnerFriendly: 'Yes',
                 petFriendly: 'No',
+                imgsrc: 'https://cdn.shopify.com/s/files/1/0068/4215/5090/products/FicusGinseng_DTL_6_large.jpg?v=1619010903'
             }],
             // modalState: {
             //     open: false, 
