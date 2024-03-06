@@ -1,0 +1,2 @@
+# SoloProject
+Javascript solo project
