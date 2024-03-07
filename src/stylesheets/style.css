@@ -1,6 +1,6 @@
 html {
     box-sizing: border-box;
-    font: 62.5% 'Source Sans Pro', sans-serif;
+    font: 62.5% "Montserrat", sans-serif;
     margin: 0;
     padding: 0; 
 }
@@ -9,7 +9,8 @@ html {
 body {
     margin: 0px;
     line-height: 1.3;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
     background-color:  #f3f3f3;
 }
   
@@ -42,8 +43,8 @@ h3 {
     /* width: 100%; */
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 3rem;
+    padding-right: 3rem;
     background-color: white;
     display: flex;
     justify-content: space-between;
@@ -59,20 +60,33 @@ h3 {
     height: 35px;
 }
 
-.navbar{ 
+.navbar a { 
     font-size: 1.5rem;
     color: black;
     font-weight: 500;
     text-decoration: none;
-    /* margin-left: 0;
-    margin-right: 40px;  */
+    margin-right: 40px;
+    color: darkgreen;
+    font-weight: bold;
+}
+
+.navbar svg { 
+    padding: 0 5px; 
+    color: darkgreen;
+
 }
 
 
 /*Main container where products are displayed*/
+.pageHeader{
+    padding: 1rem 3rem;
+
+}
+
+
 .prodContainer{
     /* background-color: blue; */
-    padding: 1rem 3rem;
+    /* padding: 1rem 3rem; */
     display: grid;
     grid-template-columns: repeat(var(--repeat, auto-fill), minmax(280px, 1fr));  /*(3, 1fr)*/;
 }
@@ -101,12 +115,14 @@ h3 {
     align-items: center;
 }
   
-.prodHeadContainer div {
+/* .prodHeadContainer div {
     width: 100%;
-  }
+  } */
   
-.prodHeadContainer h3 {
+.pageHeader h2 {
     margin: 0;
+    /* color: grey;  */
+    font-weight: 300;
 }
 
 .prodDetailsList{ 

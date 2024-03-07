@@ -56,7 +56,7 @@ class Products extends Component {
         return (
             <section className='mainSection'>
                 <header className="pageHeader">
-                    <h2>Products</h2>
+                    <h2>Find your next succulent, herb or tree</h2>
                 </header>
                 <div className='prodContainer'>
                     {prodElems}
