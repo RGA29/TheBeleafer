@@ -7,31 +7,7 @@ class Products extends Component {
         super(props); 
         this.state = {
             fetchedProd: false, 
-            products: [{ 
-                name: 'Peperomia Santorini',
-                price: '$25.00',
-                beginnerFriendly: 'Yes',
-                petFriendly: 'No',
-                imgsrc: 'https://plantly.io/wp-content/uploads/2020/10/IMG-2933-300x300.jpg'
-            }, { 
-                name: 'Peperomia Santorini',
-                price: '$25.00',
-                beginnerFriendly: 'Yes',
-                petFriendly: 'No',
-                imgsrc: 'https://plantly.io/wp-content/uploads/2020/10/IMG-2933-300x300.jpg'
-            }, { 
-                name: 'Peperomia Santorini',
-                price: '$25.00',
-                beginnerFriendly: 'Yes',
-                petFriendly: 'No',
-                imgsrc: 'https://cdn.shopify.com/s/files/1/0068/4215/5090/products/FicusGinseng_DTL_6_large.jpg?v=1619010903'
-            }, { 
-                name: 'Peperomia Santorini',
-                price: '$25.00',
-                beginnerFriendly: 'Yes',
-                petFriendly: 'No',
-                imgsrc: 'https://cdn.shopify.com/s/files/1/0068/4215/5090/products/FicusGinseng_DTL_6_large.jpg?v=1619010903'
-            }],
+            products: [],
             // modalState: {
             //     open: false, 
             //     type: null, 
@@ -44,8 +20,30 @@ class Products extends Component {
         // this.closeModal = this.closeModal.bind(this);
     }
 
+    componentDidMount() {
+        fetch('/api/')
+        .then(res => res.json())
+        .then((products)=> {
+            if(!Array.isArray(products)) products = []; 
+            return this.setState({
+                products,
+                fetchedProd: true
+            });
+        })
+        .catch(err => console.log('Products.componentDidMount: get characters: ERROR: ', err))
+    }
+
     render (){
+        // if (!this.state.fetchedProd) return (
+        //     <div>
+        //         <h1>Loading data, please wait..</h1>
+        //     </div>
+        // )
         const { products } = this.state; 
+        if (!products) return null; 
+        if (!products.length) return (
+        <div><h1>Sorry, no products found...</h1></div>
+        );
         const prodElems = products.map((elem, i)=>{
             return (
             <ProductCard

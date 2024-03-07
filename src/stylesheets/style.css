@@ -1,6 +1,8 @@
 html {
     box-sizing: border-box;
     font: 62.5% 'Source Sans Pro', sans-serif;
+    margin: 0;
+    padding: 0; 
 }
   
   
@@ -26,6 +28,46 @@ h2 {
 h3 {
     font-size: 1.8rem;
 }
+
+.appContainer{
+    width: 100%;
+    margin: 0;
+}
+
+.navheader{
+    /* position: fixed; 
+    top:0; 
+    left:0;
+    right:0;  */
+    /* width: 100%; */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border-bottom: solid green;
+    
+}
+.logo {
+    margin: 0px;
+}
+.logo img{
+    height: 35px;
+}
+
+.navbar{ 
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+    /* margin-left: 0;
+    margin-right: 40px;  */
+}
+
 
 /*Main container where products are displayed*/
 .prodContainer{

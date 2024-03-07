@@ -7,6 +7,7 @@ productController.getProducts = async (req, res, next)=>{
         const productQuery = "SELECT * from products; "
         const result = await db.query(productQuery); 
         console.log("from database", result.rows);
+        res.locals.info = result.rows; 
         next(); 
     }
     catch (err){
