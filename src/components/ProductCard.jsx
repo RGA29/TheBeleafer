@@ -1,4 +1,6 @@
-import React from 'react'; 
+import React from 'react';
+import { PetIcon } from './PetIcon';
+import { BeginnerIcon } from './BeginnerIcon';
 
 
 const ProductCard = ({info}) => {
@@ -29,11 +31,11 @@ const ProductCard = ({info}) => {
             </div>
             <a className="prodPrice">${Number.parseFloat(price).toFixed(2)}</a>
             <ul className="prodDetailsList">
-                <li className="prodDetail"> <span>Beginner Friendly:</span> {beg_friendly ? 'Yes' : 'No'} </li>
-                <li className="prodDetail"><span>Pet Friendly:</span> {pet_friendly ? 'Yes' : 'No'}</li>
+                <li className="prodDetail"> <span><BeginnerIcon/>Beginner Friendly:</span> {beg_friendly ? 'Yes' : 'No'} </li>
+                <li className="prodDetail"><span><PetIcon/>Pet Friendly:</span> {pet_friendly ? 'Yes' : 'No'}</li>
             </ul>
             <div className='buyButton'>
-                <button onClick={e=>addToCart(id)}>ADD TO CART</button>
+                <button type="submit" onClick={e=>addToCart(id)}>ADD TO CART</button>
             </div>
         </article>
     )

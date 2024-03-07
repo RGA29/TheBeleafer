@@ -33,6 +33,7 @@ class App extends Component {
             });
         })
         .catch(err => console.log('Products.componentDidMount: get characters: ERROR: ', err))
+    
     }
 
     openModal(type, position, id) {
@@ -55,6 +56,7 @@ class App extends Component {
           }
         });
       }
+    
 
     render (){
         return (

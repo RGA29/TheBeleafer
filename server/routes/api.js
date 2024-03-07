@@ -11,6 +11,10 @@ router.get('/', productController.getProducts, (req, res)=>{
 })
 
 router.post('/', productController.addProductToCard, (req, res)=>{
+    res.status(200).json(res.locals.done); 
+})
+
+router.get('/cart', productController.getCart, (req, res)=>{
     res.status(200).json(res.locals.cart); 
 })
 
