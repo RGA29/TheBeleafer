@@ -2,7 +2,22 @@ import React from 'react';
 
 
 const ProductCard = ({info}) => {
-    const { name, price , image, beg_friendly, pet_friendly} = info;  
+    const { id, name, price , image, beg_friendly, pet_friendly} = info; 
+    function addToCart (prodId) {
+        fetch('/api/', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'Application/JSON'
+            },
+            body: JSON.stringify({id: prodId})
+          })
+            .then(resp => resp.json())
+            .then((data) => {
+              console.log(data);
+            })
+            .catch(err => console.log('add to cart fetch /api/: ERROR: ', err));
+        }
+      
     return (
         <article className="card prodCard">
             <div className='imageContainer'>
@@ -18,7 +33,7 @@ const ProductCard = ({info}) => {
                 <li className="prodDetail"><span>Pet Friendly:</span> {pet_friendly ? 'Yes' : 'No'}</li>
             </ul>
             <div className='buyButton'>
-                <button type="button">ADD TO CART</button>
+                <button onClick={e=>addToCart(id)}>ADD TO CART</button>
             </div>
         </article>
     )
