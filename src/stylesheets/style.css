@@ -176,3 +176,91 @@ h3 {
     padding: 10px;
     width: 100%;
 }
+
+/* modal */
+.modal{
+    position: absolute;
+    padding: 0.8rem;
+    width: 320px; 
+    min-height: 300px;
+    color: black;
+    background:  white; 
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(22, 22, 22, 0.915);
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+}
+.modalheader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 5px;
+}
+
+.modal span {
+    text-align: right;
+    padding-left: 50%;
+}
+
+
+
+.modalsummary{
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+
+}
+.modalsummary table {
+    border-bottom: solid thin green; 
+    width: 300px;
+
+}
+
+#name {
+    width: 150px; 
+}
+#count {
+    width: 18.75px; 
+    text-align: right;
+}
+#price {
+    width: 37.5px; 
+    text-align: right;
+}
+#img{
+    text-align: center;
+}
+#total {
+    width: 150px;
+
+    font-size: 1.5rem;  
+}
+#total h3{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.modalsummary img{
+    height: 30px;
+    width: 30px;
+
+}
+
+.checkout {
+    width: 100%; 
+    /* margin-top: 20px; */
+    margin-right: 5px;
+    background-color: green;
+    color: white; 
+    border-radius: 5px;
+    border-style: none;
+    padding: 10px;
+}
+
+.close {
+    background-color: white;
+    color: green;
+    border: solid thin lightgrey;
+}

@@ -47,14 +47,12 @@ class App extends Component {
 
         }
 
-    openModal(type, position, id) {
+    openModal(position) {
         this.setState({
           modalState: {
             ...this.state.modalState,
             open: true,
-            type,
             position,
-            id
           }
         });
       }

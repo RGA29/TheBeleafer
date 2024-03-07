@@ -18,4 +18,8 @@ router.get('/cart', productController.getCart, (req, res)=>{
     res.status(200).json(res.locals.cart); 
 })
 
+router.get('/details', productController.getDetails, (req, res)=>{
+    res.status(200).json(res.locals.details); 
+})
+
 module.exports = router; 

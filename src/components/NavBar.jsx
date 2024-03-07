@@ -6,7 +6,12 @@ import { UserIcon } from './UserIcon';
 
 //<a href="https://www.flaticon.com/free-icons/search" title="search icons">Search icons created by Catalin Fertu - Flaticon</a>
 
-const NavBar = ({cartCount}) => {
+const NavBar = ({cartCount, openModal}) => {
+    const openDetailsModal = (e) => {
+        const top = e.pageY + 15; 
+        const left = e.pageX - 200;
+        openModal({top, left})
+    }
     return (
         <header className='navheader'>
             <div href="#" className='logo'>
@@ -17,7 +22,7 @@ const NavBar = ({cartCount}) => {
             <nav className="navbar">
                 <a href="#"><SearchIcon/> Search</a>
                 <a href="#"><UserIcon/>Login</a>
-                <a href="#"><CartIcon/>Cart ({cartCount})</a>
+                <a href="#" onClick={e=> openDetailsModal(e)}><CartIcon/>Cart ({cartCount})</a>
             </nav>
         </header>
     )

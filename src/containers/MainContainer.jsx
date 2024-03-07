@@ -37,13 +37,20 @@ const MainContainer = props => {
 
     return (
         <div className='appContainer'> 
-            <NavBar cartCount = {cart}/>
+            <NavBar cartCount = {cart}
+            openModal = {props.openModal}/>
             <Products products= {props.products}
             addToCart = {addToCart}/>
+
+
+            { props.modalState.open &&
             <CartModal 
             type = {props.modalState.type}
-            
+            position = {props.modalState.position}
+            id = {props.modalState.id}
             closeModal = {props.closeModal}/>
+            }
+            
         </div>
     )
 }
