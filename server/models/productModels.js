@@ -1,6 +1,7 @@
 const { Pool } = require ("pg"); 
+require('dotenv').config(); 
 
-const PG_URI= "postgres://qasqlowl:WHvwD3I453ra7zNG70oE9tnm7m9A-gRY@kesavan.db.elephantsql.com/qasqlowl"; 
+const PG_URI= process.env.PG_URI
 
 // CREATING A NEW POOL 
 const pool = new Pool({
