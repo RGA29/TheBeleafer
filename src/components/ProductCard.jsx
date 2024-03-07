@@ -3,23 +3,9 @@ import { PetIcon } from './PetIcon';
 import { BeginnerIcon } from './BeginnerIcon';
 
 
-const ProductCard = ({info}) => {
+const ProductCard = ({info, addToCart}) => {
     const { id, name, price , image, beg_friendly, pet_friendly} = info; 
-    function addToCart (prodId) {
-        fetch('/api/', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'Application/JSON'
-            },
-            body: JSON.stringify({id: prodId})
-          })
-            .then(resp => resp.json())
-            .then((data) => {
-              console.log(data);
-            })
-            .catch(err => console.log('add to cart fetch /api/: ERROR: ', err));
-        }
-      
+          
     return (
         <article className="card prodCard">
             <div className='imageContainer'>

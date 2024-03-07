@@ -4,7 +4,7 @@ import ProductCard from './ProductCard';
 
 const Products =(props) => {
 
-    const { products } = props;
+    const { products, addToCart } = props;
     console.log("show me", products); 
         if (!products) return null; 
         if (!products.length) return (
@@ -15,6 +15,7 @@ const Products =(props) => {
             <ProductCard
                 key ={i}
                 info = {elem}
+                addToCart = {addToCart}
             />
             );
         });

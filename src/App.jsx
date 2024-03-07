@@ -1,6 +1,7 @@
 import React, { Component } from 'react'; 
 import Products from './components/Products'; 
 import NavBar from './components/NavBar'; 
+import MainContainer from './containers/MainContainer';
 
 // import './stylesheets/styles.css';
 
@@ -8,6 +9,7 @@ class App extends Component {
     constructor(props) {
         super(props); 
         this.state = {
+            cartCount: 0, 
             fetchedProd: false, 
             products: [],
             modalState: {
@@ -32,9 +34,18 @@ class App extends Component {
                 fetchedProd: true
             });
         })
-        .catch(err => console.log('Products.componentDidMount: get characters: ERROR: ', err))
-    
-    }
+        .catch(err => console.log('App.componentDidMount: get characters: ERROR: ', err))
+
+        // fetch('/api/cart')
+        //   .then(res=>res.json())
+        //   .then((cart)=>{
+        //     return this.setState({
+        //       cartCount: cart,
+        //     }); 
+        //   })
+        //   .catch(err => console.log('App.componentDidMount: get cart: ERROR: ', err))
+
+        }
 
     openModal(type, position, id) {
         this.setState({
@@ -61,9 +72,14 @@ class App extends Component {
     render (){
         return (
             <div className='appContainer'> 
-            <NavBar/>
-            <Products products= {this.state.products}/>
-        </div>
+            <MainContainer 
+            modalState = {this.state.modalState}
+            cartCount = {this.state.cartCount}
+            products= {this.state.products}
+            openModal = {this.openModal}
+            closeModal = {this.closeModal}
+            />
+          </div>
             
         )
     }
