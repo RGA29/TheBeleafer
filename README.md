@@ -1,2 +1,2 @@
-# SoloProject
-Javascript solo project
+# The Beleafer
+Website selling houseplants. 
